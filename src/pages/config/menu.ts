@@ -20,7 +20,7 @@ export const subMenus: Record<string, { key: string; label: string }[]> = {
   ],
   "customer-analysis": [
     { key: "overview", label: "Overview" },
-    { key: "company-overview", label: "Company Overview" },
+    { key: "digital-technology", label: "Digital Technology" },
     { key: "financial-legal", label: "Financial & Legal" },
     { key: "operations-market", label: "Operations & Market" },
     { key: "aspirations", label: "Aspirations" },
@@ -47,7 +47,7 @@ export const subKeyToFile: Record<string, string> = {
   "about-morero": "AboutMorero",
   "founder": "Founder",
   "overview": "Overview",
-  "company-overview": "CompanyOverview",
+  "digital-technology": "DigitalTechnology",
   "financial-legal": "FinancialLegal",
   "operations-market": "OperationsMarket",
   "aspirations": "Aspirations",

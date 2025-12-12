@@ -2,7 +2,7 @@ import { lazy } from "react";
 
 // Overview pages
 const DigitalTransformationProposal = lazy(
-  () => import("@/pages/overview/DigitalTransformationProposal")
+  () => import("@/pages/overview/Values")
 );
 const AboutMorero = lazy(
   () => import("@/pages/overview/AboutMorero")
@@ -13,7 +13,7 @@ const Founder = lazy(
 
 // Customer Analysis pages
 const AnalysisOverview = lazy(() => import("@/pages/customer-analysis/Overview"));
-const CompanyOverview = lazy(() => import("@/pages/customer-analysis/CompanyOverview"));
+const DigitalTechnology = lazy(() => import("@/pages/customer-analysis/DigitalTechnology"));
 const FinancialLegal = lazy(() => import("@/pages/customer-analysis/FinancialLegal"));
 const OperationsMarket = lazy(() => import("@/pages/customer-analysis/OperationsMarket"));
 const Aspirations = lazy(() => import("@/pages/customer-analysis/Aspirations"));
@@ -54,9 +54,9 @@ export const contentMenus: Record<
       component: <AnalysisOverview />,
     },
     {
-      key: "company-overview",
-      label: "Company Overview",
-      component: <CompanyOverview />,
+      key: "digital-technology",
+      label: "Digital Technology",
+      component: <DigitalTechnology />,
     },
     {
       key: "financial-legal",

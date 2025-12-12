@@ -1,6 +1,6 @@
 import pdLogo from "@/assets/pd-logo.jpg";
 
-export const title = "Digital Transformation Proposal";
+export const title = "Values";
 export const lastUpdated = new Date().toLocaleDateString();
 
 export default function DigitalTransformationProposal() {
