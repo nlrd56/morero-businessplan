@@ -1,0 +1,9 @@
+{
+  "name": "morero-intranet",
+  "compatibility_date": "2025-11-19",
+  "main": "worker/index.ts",
+  "assets": {
+    "directory": "./dist"
+  }
+}
+
