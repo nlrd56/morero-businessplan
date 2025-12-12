@@ -1,13 +1,12 @@
-export const title = "Overview";
+export const title = "Industry Analysis";
 export const lastUpdated = new Date().toLocaleDateString();
 
-export default function Overview() {
+export default function IndustryAnalysis() {
   return (
     <div className="font-be-vietnam-pro font-light text-sm text-gray-400">
-      <h2 className="content-title">Industry & Competitor Analysis</h2>
-      
+    
       <section className="mb-6">
-        <h3 className="content-title text-lg mb-3">Industry Overview</h3>
+        <h3 className="content-title text-lg mb-3">Industry Analysis</h3>
         <p>
         Construction is one of the world’s oldest industries and remains a cornerstone of economic development. In the UK, it contributes over £17.7 billion annually to the economy, with £9.9 billion from new works alone, representing 6% of GDP. The sector has grown by an average of 4.4% per year over the last five years and is forecast to grow at 2.4% annually between 2024 and 2028. With 365,000 construction companies employing 2.1 million people, approximately 9% of the UK workforce, the industry is a major employer. However, an additional 250,000 workers will be needed by 2028 to meet demand.
         </p>

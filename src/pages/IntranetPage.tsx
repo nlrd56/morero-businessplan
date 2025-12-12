@@ -22,9 +22,11 @@ function getTabAndSubTabFromPath() {
   // Set default subTab based on the tab
   let defaultSubTab = "digital-transformation-proposal";
   if (tab === "customer-analysis") {
-    defaultSubTab = "overview";
+    defaultSubTab = "industry-analysis";
   } else if (tab === "proposal") {
     defaultSubTab = "value-fit";
+  } else if (tab === "value-proposition") {
+    defaultSubTab = "market-position";
   }
   const subTab = path[1] || defaultSubTab;
   return { tab, subTab };

@@ -12,11 +12,18 @@ const Founder = lazy(
 );
 
 // Customer Analysis pages
-const AnalysisOverview = lazy(() => import("@/pages/customer-analysis/Overview"));
+const IndustryAnalysis = lazy(() => import("@/pages/customer-analysis/IndustryAnalysis"));
 const DigitalTechnology = lazy(() => import("@/pages/customer-analysis/DigitalTechnology"));
-const FinancialLegal = lazy(() => import("@/pages/customer-analysis/FinancialLegal"));
-const OperationsMarket = lazy(() => import("@/pages/customer-analysis/OperationsMarket"));
-const Aspirations = lazy(() => import("@/pages/customer-analysis/Aspirations"));
+const PrimaryTargetCustomer = lazy(() => import("@/pages/customer-analysis/PrimaryTargetCustomer"));
+const CompetitorAnalysis = lazy(() => import("@/pages/customer-analysis/CompetitorAnalysis"));
+const CustomerPainPoints = lazy(() => import("@/pages/customer-analysis/CustomerPainPoints"));
+
+// Value Proposition pages
+const MarketPosition = lazy(() => import("@/pages/value-proposition/MarketPosition"));
+const USP = lazy(() => import("@/pages/value-proposition/USP"));
+const ProductOverview = lazy(() => import("@/pages/value-proposition/ProductOverview"));
+const SystemArchitecture = lazy(() => import("@/pages/value-proposition/SystemArchitecture"));
+const FutureDevelopment = lazy(() => import("@/pages/value-proposition/FutureDevelopment"));
 
 // Proposal pages
 const ValueFit = lazy(() => import("@/pages/proposal/ValueFit"));
@@ -49,29 +56,29 @@ export const contentMenus: Record<
   ],
   "customer-analysis": [
     {
-      key: "overview",
-      label: "Overview",
-      component: <AnalysisOverview />,
+      key: "industry-analysis",
+      label: "Industry Analysis",
+      component: <IndustryAnalysis />,
     },
     {
-      key: "digital-technology",
-      label: "Digital Technology",
+      key: "digital-construction-analysis",
+      label: "Digital Construction Analysis",
       component: <DigitalTechnology />,
     },
     {
-      key: "financial-legal",
-      label: "Financial & Legal",
-      component: <FinancialLegal />,
+      key: "competitor-analysis",
+      label: "Competitor Analysis",
+      component: <CompetitorAnalysis />,
     },
     {
-      key: "operations-market",
-      label: "Operations & Market",
-      component: <OperationsMarket />,
+      key: "primary-target-customer",
+      label: "Primary Target Customer",
+      component: <PrimaryTargetCustomer />,
     },
     {
-      key: "aspirations",
-      label: "Aspirations",
-      component: <Aspirations />,
+      key: "customer-pain-points",
+      label: "Customer Pain Points",
+      component: <CustomerPainPoints />,
     },
   ],
   proposal: [
@@ -99,6 +106,33 @@ export const contentMenus: Record<
       key: "terms-conditions",
       label: "Terms & Conditions",
       component: <TermsConditions />,
+    },
+  ],
+  "value-proposition": [
+    {
+      key: "market-position",
+      label: "Market Position",
+      component: <MarketPosition />,
+    },
+    {
+      key: "usp",
+      label: "USP",
+      component: <USP />,
+    },
+    {
+      key: "product-overview",
+      label: "Product Overview",
+      component: <ProductOverview />,
+    },
+    {
+      key: "system-architecture",
+      label: "System Architecture",
+      component: <SystemArchitecture />,
+    },
+    {
+      key: "future-development",
+      label: "Future Development",
+      component: <FutureDevelopment />,
     },
   ],
 };

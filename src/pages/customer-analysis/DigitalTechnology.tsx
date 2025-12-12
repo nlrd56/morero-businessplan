@@ -1,4 +1,4 @@
-export const title = "Digital Technology";
+export const title = "Digital Construction Analysis";
 export const lastUpdated = new Date().toLocaleDateString();
 
 export default function DigitalTechnology() {
@@ -54,20 +54,19 @@ export default function DigitalTechnology() {
             
             {/* Rows */}
             <div className="flex">
-              <div className="flex-[0_0_30%] border-r border-b border-white/20 px-4 py-2 font-medium">Lack of Digital Solutions for Clients</div>
-                <div className="flex-1 border-b border-white/20 px-4 py-2">A review of the top 60 global construction softwares show that clients are almost invisible in this digital landscape. Years before a contractor arrives, the client is making choices that define the entire project. By the time delivery teams get involved, it’s often too late to influence the decisions that matter most. The client, the most influential person on a project, remains without meaningful digital support.</div>
-            </div>
-            
-            <div className="flex bg-gray-800/50">
               <div className="flex-[0_0_30%] border-r border-b border-white/20 px-4 py-2 font-medium">Focus on Sustainability</div>
-                <div className="flex-1 border-b border-white/20 px-4 py-2">With the global push towards sustainability, there is significant growth potential in carbon reporting and ESG adoption, especially as regulatory trends create competitive advantages for compliant companies.</div>
-                </div>
+              <div className="flex-1 border-b border-white/20 px-4 py-2">With the global push towards sustainability, there is significant growth potential in carbon reporting and ESG adoption, especially as regulatory trends create competitive advantages for compliant companies.</div>
+            </div>
   
-              <div className="flex">
-                <div className="flex-[0_0_30%] border-r border-b border-white/20 px-4 py-2 font-medium">Untapped Social Value Potential</div>
-                <div className="flex-1 border-b border-white/20 px-4 py-2">Standardising social value metrics and demonstrating tangible benefits can drive broader adoption, particularly for companies prioritising ESG initiatives.
-              </div>
-              </div>
+            <div className="flex bg-gray-800/50">
+              <div className="flex-[0_0_30%] border-r border-b border-white/20 px-4 py-2 font-medium">Untapped Social Value Potential</div>
+              <div className="flex-1 border-b border-white/20 px-4 py-2">Standardising social value metrics and demonstrating tangible benefits can drive broader adoption, particularly for companies prioritising ESG initiatives.</div>
+            </div>
+
+            <div className="flex">
+              <div className="flex-[0_0_30%] border-r border-white/20 px-4 py-2 font-medium">Whole-life Digital Integration</div>
+              <div className="flex-1 px-4 py-2">Digital construction tools remain concentrated on isolated project stages, creating a clear opportunity to connect data across design, delivery, and operation to support whole-life decision-making.</div>
+            </div>
           </div>
         </section>
       </div>
