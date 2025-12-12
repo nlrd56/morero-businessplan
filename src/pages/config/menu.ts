@@ -8,7 +8,7 @@ import {
 export const menuItems = [
   { key: "overview", label: "Overview", icon: Home },
   { key: "customer-analysis", label: "Analysis", icon: Search },
-  { key: "value-proposition", label: "Value Proposition", icon: Presentation },
+  { key: "value-proposition", label: "Value Prop", icon: Presentation },
   { key: "business-model", label: "Business Model", icon: Presentation },
   { key: "gtm", label: "GTM Strategy", icon: Presentation },
 ];
