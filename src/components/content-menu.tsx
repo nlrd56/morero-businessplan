@@ -25,12 +25,16 @@ const ProductOverview = lazy(() => import("@/pages/value-proposition/ProductOver
 const SystemArchitecture = lazy(() => import("@/pages/value-proposition/SystemArchitecture"));
 const FutureDevelopment = lazy(() => import("@/pages/value-proposition/FutureDevelopment"));
 
-// Proposal pages
-const ValueFit = lazy(() => import("@/pages/proposal/ValueFit"));
-const IdentifiedNeeds = lazy(() => import("@/pages/proposal/IdentifiedNeeds"));
-const Plan = lazy(() => import("@/pages/proposal/Plan"));
-const CostOptions = lazy(() => import("@/pages/proposal/CostOptions"));
-const TermsConditions = lazy(() => import("@/pages/proposal/TermsConditions"));
+// Financial Model pages
+const Summary = lazy(() => import("@/pages/financial-model/Summary"));
+const Charts = lazy(() => import("@/pages/financial-model/Charts"));
+const ProfitLoss = lazy(() => import("@/pages/financial-model/ProfitLoss"));
+const Assumptions = lazy(() => import("@/pages/financial-model/Assumptions"));
+const Resources = lazy(() => import("@/pages/financial-model/Resources"));
+const Workload = lazy(() => import("@/pages/financial-model/Workload"));
+const Revenue = lazy(() => import("@/pages/financial-model/Revenue"));
+const Expenses = lazy(() => import("@/pages/financial-model/Expenses"));
+const PriceValidation = lazy(() => import("@/pages/financial-model/PriceValidation"));
 
 // Business Proposal Content Menu
 export const contentMenus: Record<
@@ -81,33 +85,6 @@ export const contentMenus: Record<
       component: <CustomerPainPoints />,
     },
   ],
-  proposal: [
-    {
-      key: "value-fit",
-      label: "Value Fit",
-      component: <ValueFit />,
-    },
-    {
-      key: "identified-needs",
-      label: "Identified Needs",
-      component: <IdentifiedNeeds />,
-    },
-    {
-      key: "plan",
-      label: "Plan",
-      component: <Plan />,
-    },
-    {
-      key: "cost-options",
-      label: "Cost Options",
-      component: <CostOptions />,
-    },
-    {
-      key: "terms-conditions",
-      label: "Terms & Conditions",
-      component: <TermsConditions />,
-    },
-  ],
   "value-proposition": [
     {
       key: "market-position",
@@ -133,6 +110,53 @@ export const contentMenus: Record<
       key: "future-development",
       label: "Future Development",
       component: <FutureDevelopment />,
+    },
+  ],
+  "financial-model": [
+    {
+      key: "summary",
+      label: "Summary",
+      component: <Summary />,
+    },
+    {
+      key: "charts",
+      label: "Charts",
+      component: <Charts />,
+    },
+    {
+      key: "profit-loss",
+      label: "Profit & Loss",
+      component: <ProfitLoss />,
+    },
+    {
+      key: "assumptions",
+      label: "Assumptions",
+      component: <Assumptions />,
+    },
+    {
+      key: "resources",
+      label: "Resources",
+      component: <Resources />,
+    },
+    {
+      key: "workload",
+      label: "Workload",
+      component: <Workload />,
+    },
+    {
+      key: "revenue",
+      label: "Revenue",
+      component: <Revenue />,
+    },
+    {
+      key: "expenses",
+      label: "Expenses",
+      component: <Expenses />,
+    },
+    {
+      key: "price-validation",
+      label: "Price Validation",
+      component: <PriceValidation />,
     },
   ],
 };

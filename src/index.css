@@ -183,7 +183,12 @@
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 2px;
+  height: 6px;
   background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar:horizontal {
+  height: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {

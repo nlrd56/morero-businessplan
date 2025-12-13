@@ -93,33 +93,41 @@ export function DataTable<TData>({
             </tr>
           </thead>
           <tbody>
-            {data.map((row: any, rowIndex) => (
-              <tr key={rowIndex}>
-                {columns.map((column, colIndex) => {
-                  const isMonthColumn = /\w{3} \d{2}$/.test(column.title);
-                  return (
-                    <td
-                      key={colIndex}
-                      className={`text-sm text-white font-be-vietnam-pro border-b border-gray-700 text-left ${
-                        isMonthColumn
-                          ? "min-w-[140px] px-3"
-                          : "min-w-[150px] px-4"
-                      } ${hoveredColumn === colIndex ? "column-hover" : ""}`}
-                      onMouseEnter={() => handleColumnHover(colIndex)}
-                      onMouseLeave={handleColumnLeave}
-                    >
-                      {column.render ? (
-                        column.render(row[column.data], "display", row)
-                      ) : (
-                        <span className="text-white font-be-vietnam-pro text-xs">
-                          {row[column.data]}
-                        </span>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
+            {data.map((row: any, rowIndex) => {
+              const isLastRow = rowIndex === data.length - 1;
+              return (
+                <tr 
+                  key={rowIndex}
+                  className="hover:bg-gray-800/50 transition-colors"
+                >
+                  {columns.map((column, colIndex) => {
+                    const isMonthColumn = /\w{3} \d{2}$/.test(column.title);
+                    return (
+                      <td
+                        key={colIndex}
+                        className={`text-sm text-white font-be-vietnam-pro text-left ${
+                          isLastRow ? "border-b-0" : "border-b border-gray-700"
+                        } ${
+                          isMonthColumn
+                            ? "min-w-[140px] px-3"
+                            : "min-w-[150px] px-4"
+                        } ${hoveredColumn === colIndex ? "column-hover" : ""}`}
+                        onMouseEnter={() => handleColumnHover(colIndex)}
+                        onMouseLeave={handleColumnLeave}
+                      >
+                        {column.render ? (
+                          column.render(row[column.data], "display", row)
+                        ) : (
+                          <span className="text-white font-be-vietnam-pro text-xs">
+                            {row[column.data]}
+                          </span>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

@@ -67,7 +67,7 @@ export class AssumptionsService {
   }
 
   // Get assumptions by category with ONS data
-  public async getAssumptionsByCategory(category: 'market' | 'conversions' | 'cost'): Promise<FinancialAssumption[]> {
+  public async getAssumptionsByCategory(category: 'market' | 'conversions' | 'cost' | 'budgets' | 'funnel' | 'churn' | 'growth'): Promise<FinancialAssumption[]> {
     const allAssumptions = await this.getAssumptionsWithONSData();
     return allAssumptions.filter(assumption => assumption.category === category);
   }
@@ -89,6 +89,20 @@ export class AssumptionsService {
   public async getNewWorkOrdersValue(): Promise<string | number> {
     const newWorkOrders = await this.getAssumptionById('new_work_orders');
     return newWorkOrders?.months[0] || '£240,000';
+  }
+
+  // Update an assumption
+  public async updateAssumption(id: string, updates: Partial<FinancialAssumption>): Promise<void> {
+    const allAssumptions = await this.getAssumptionsWithONSData();
+    const index = allAssumptions.findIndex(assumption => assumption.id === id);
+    
+    if (index !== -1) {
+      allAssumptions[index] = { ...allAssumptions[index], ...updates };
+      this.cachedAssumptions = allAssumptions;
+      this.lastUpdate = Date.now();
+    } else {
+      throw new Error(`Assumption with id ${id} not found`);
+    }
   }
 }
 

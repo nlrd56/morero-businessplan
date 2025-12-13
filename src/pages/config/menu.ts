@@ -10,6 +10,7 @@ export const menuItems = [
   { key: "customer-analysis", label: "Analysis", icon: Search },
   { key: "value-proposition", label: "Value Prop", icon: Presentation },
   { key: "business-model", label: "Business Model", icon: Presentation },
+  { key: "financial-model", label: "Financial Model", icon: Presentation },
   { key: "gtm", label: "GTM Strategy", icon: Presentation },
 ];
 
@@ -34,12 +35,16 @@ export const subMenus: Record<string, { key: string; label: string }[]> = {
     { key: "system-architecture", label: "System Architecture" },
     { key: "future-development", label: "Future Development" },
   ],
-  proposal: [
-    { key: "value-fit", label: "Value Fit" },
-    { key: "identified-needs", label: "Identified Needs" },
-    { key: "plan", label: "Plan" },
-    { key: "cost-options", label: "Cost Options" },
-    { key: "terms-conditions", label: "Terms & Conditions" },
+  "financial-model": [
+    { key: "summary", label: "Summary" },
+    { key: "charts", label: "Charts" },
+    { key: "profit-loss", label: "Profit & Loss" },
+    { key: "assumptions", label: "Assumptions" },
+    { key: "resources", label: "Resources" },
+    { key: "workload", label: "Workload" },
+    { key: "revenue", label: "Revenue" },
+    { key: "expenses", label: "Expenses" },
+    { key: "price-validation", label: "Price Validation" },
   ],
 };
 
@@ -48,7 +53,7 @@ export const menuKeyToFolder: Record<string, string> = {
   overview: "overview",
   "customer-analysis": "customer-analysis",
   "value-proposition": "value-proposition",
-  proposal: "proposal",
+  "financial-model": "financial-model",
 };
 
 // Map submenu keys to file names (PascalCase) - Business Proposal Structure
@@ -66,10 +71,14 @@ export const subKeyToFile: Record<string, string> = {
   "product-overview": "ProductOverview",
   "system-architecture": "SystemArchitecture",
   "future-development": "FutureDevelopment",
-  "aspirations": "Aspirations",
-  "value-fit": "ValueFit",
-  "identified-needs": "IdentifiedNeeds",
-  "plan": "Plan",
-  "cost-options": "CostOptions",
-  "terms-conditions": "TermsConditions",
+  "summary": "Summary",
+  "charts": "Charts",
+  "profit-loss": "ProfitLoss",
+  "assumptions": "Assumptions",
+  "resources": "Resources",
+  "workload": "Workload",
+  "revenue": "Revenue",
+  "expenses": "Expenses",
+  "price-validation": "PriceValidation",
+
 };

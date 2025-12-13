@@ -27,6 +27,8 @@ function getTabAndSubTabFromPath() {
     defaultSubTab = "value-fit";
   } else if (tab === "value-proposition") {
     defaultSubTab = "market-position";
+  } else if (tab === "financial-model") {
+    defaultSubTab = "summary";
   }
   const subTab = path[1] || defaultSubTab;
   return { tab, subTab };
@@ -140,23 +142,27 @@ export default function IntranetPage({ onLogout }: IntranetPageProps) {
 
         {/* Main Content */}
         <main className="flex-1 h-screen p-6 flex items-stretch justify-stretch">
-          <Card className="w-full h-full bg-[#232323] rounded-md border border-white/20 flex flex-col p-5 overflow-hidden">
+          <Card className="w-full h-full bg-[#232323] rounded-md border border-white/20 flex flex-col p-5" style={{ overflowY: 'hidden' }}>
             {/* Tabs Section (only show if has submenu) - positioned at top edge */}
             {activeSubMenu && (
-              <div className="flex items-center gap-2">
-                {activeSubMenu.map(({ key, label }) => (
-                  <button
-                    key={key}
-                    onClick={() => setActiveSubTab(key)}
-                    className={
-                      key === activeSubTab
-                        ? "px-4 py-2 text-white font-be-vietnam-pro font-medium text-xs tab-border bg-[#232323] transition-colors"
-                        : "px-4 py-2 text-gray-500 font-be-vietnam-pro font-medium text-xs hover:text-gray-300 transition-colors"
-                    }
-                  >
-                    {label}
-                  </button>
-                ))}
+              <div className="w-full -mx-5 px-5 pt-2" style={{ overflowX: 'visible', overflowY: 'hidden' }}>
+                <div className="overflow-x-auto custom-scrollbar mb-2" style={{ paddingBottom: '8px' }}>
+                  <div className="flex items-center gap-2 flex-nowrap" style={{ width: 'max-content' }}>
+                    {activeSubMenu.map(({ key, label }) => (
+                      <button
+                        key={key}
+                        onClick={() => setActiveSubTab(key)}
+                        className={
+                          key === activeSubTab
+                            ? "px-4 py-2 text-white font-be-vietnam-pro font-medium text-xs tab-border bg-[#232323] transition-colors whitespace-nowrap flex-shrink-0"
+                            : "px-4 py-2 text-gray-500 font-be-vietnam-pro font-medium text-xs hover:text-gray-300 transition-colors whitespace-nowrap flex-shrink-0"
+                        }
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
             {/* Content Section with consistent padding */}
